@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>SkillSwap Hub</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#profiles">Community</a></li>
+                <li><a href="#booking">Book Session</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">Find your Skill Swap Partner</h1>
+                <p class="hero-tagline">Learn from each other. Grow together.</p>
+                <p class="hero-description">
+                    Connect with fellow students to exchange skills and knowledge. 
+                    Trade coding for design, public speaking for editing, and much more.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('profiles')">
+                        Offer a Skill
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('features')">
+                        Learn a Skill
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual fade-in-delay">
+    <a href="https://www.w3schools.com" target="_blank">
+        <img src="istockphoto-1399506399-612x612.jpg" alt="Learning Together" class="hero-image" />
+    </a>
+
+                <div class="floating-card">
+                    <div class="skill-badge">💻 Coding</div>
+                    <div class="swap-arrow">⇄</div>
+                    <div class="skill-badge">🎨 Design</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skill Categories</h2>
+                <p class="section-subtitle">Discover and share knowledge across various domains</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">💻</div>
+                    <h3>Coding & Programming</h3>
+                    <p>Web development, mobile apps, data science, and more</p>
+                    <div class="feature-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">React</span>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Design & Creative</h3>
+                    <p>UI/UX design, graphic design, illustration, and branding</p>
+                    <div class="feature-tags">
+                        <span class="tag">Figma</span>
+                        <span class="tag">Photoshop</span>
+                        <span class="tag">Illustrator</span>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Music & Audio</h3>
+                    <p>Music production, sound design, mixing, and mastering</p>
+                    <div class="feature-tags">
+                        <span class="tag">Logic Pro</span>
+                        <span class="tag">Ableton</span>
+                        <span class="tag">Pro Tools</span>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Languages</h3>
+                    <p>Learn new languages and improve communication skills</p>
+                    <div class="feature-tags">
+                        <span class="tag">Spanish</span>
+                        <span class="tag">French</span>
+                        <span class="tag">Mandarin</span>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Public Speaking</h3>
+                    <p>Presentation skills, storytelling, and communication</p>
+                    <div class="feature-tags">
+                        <span class="tag">Presentations</span>
+                        <span class="tag">Storytelling</span>
+                        <span class="tag">Confidence</span>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">✏️</div>
+                    <h3>Writing & Editing</h3>
+                    <p>Content writing, copywriting, editing, and proofreading</p>
+                    <div class="feature-tags">
+                        <span class="tag">Copywriting</span>
+                        <span class="tag">Editing</span>
+                        <span class="tag">SEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Profiles Section -->
+    <section id="profiles" class="profiles">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Community Members</h2>
+                <p class="section-subtitle">Connect with talented individuals ready to share their skills</p>
+            </div>
+            <div class="profiles-grid" id="profilesGrid">
+                <!-- Profiles will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Book a Session</h2>
+                <p class="section-subtitle">Schedule your skill exchange session</p>
+            </div>
+            <div class="booking-container">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button class="calendar-nav" id="prevMonth">‹</button>
+                        <h3 id="currentMonth">January 2024</h3>
+                        <button class="calendar-nav" id="nextMonth">›</button>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid">
+                        <!-- Calendar will be dynamically generated -->
+                    </div>
+                </div>
+                <div class="time-slots">
+                    <h4>Available Time Slots</h4>
+                    <div class="slots-grid" id="timeSlots">
+                        <!-- Time slots will be dynamically generated -->
+                    </div>
+                    <button class="btn btn-primary" id="bookSession" disabled>
+                        Book Selected Slot
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SkillSwap Hub</h3>
+                    <p>Connecting students through skill exchange</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#profiles">Community</a></li>
+                        <li><a href="#booking">Book Session</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>hello@skillswaphub.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SkillSwap Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h3>Confirm Your Booking</h3>
+            <div class="booking-details">
+                <p><strong>Date:</strong> <span id="selectedDate"></span></p>
+                <p><strong>Time:</strong> <span id="selectedTime"></span></p>
+                <p><strong>Duration:</strong> 1 hour</p>
+            </div>
+            <div class="booking-form">
+                <input type="text" placeholder="Your Name" id="userName" required>
+                <input type="email" placeholder="Your Email" id="userEmail" required>
+                <textarea placeholder="What would you like to learn/teach?" id="sessionNotes"></textarea>
+                <button class="btn btn-primary" id="confirmBooking">Confirm Booking</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
